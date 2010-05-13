@@ -147,7 +147,7 @@ class TestGowalla < Test::Unit::TestCase
     end
     
     should "retrieve events for a user's friends" do
-      stub_get('http://pengwynn:0U812@api.gowalla.com/visits/recent', 'events.json')
+      stub_get('http://pengwynn:0U812@api.gowalla.com/checkins/recent', 'events.json')
       events = @client.friends_events
       events.first[:type].should == 'checkin'
       events.first.user.last_name.should == 'Mack'

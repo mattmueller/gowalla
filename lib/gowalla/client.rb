@@ -25,7 +25,7 @@ module Gowalla
     end
     
     def friends_events
-      mashup(self.class.get("/visits/recent")).activity
+      mashup(self.class.get("/checkins/recent")).activity
     end
     
     def friend_requests(user_id=self.username)
